@@ -37,6 +37,7 @@ while True:
                 pass
         case "Close":
             break
+            # exit()
 
 window.close()
 
