@@ -26,6 +26,7 @@ while True:
                 new_todo = values['new_todo']
                 f.update_todo_index(todo_to_edit, new_todo)
                 window['todo_list'].update(values = f.get_todos())
+                sg.popup("Updated successfully")
             except IndexError:
                 sg.popup("Please select a todo to edit")
         case "todo_list":
@@ -38,3 +39,5 @@ while True:
             break
 
 window.close()
+
+# foula.py
