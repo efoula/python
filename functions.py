@@ -16,7 +16,8 @@ def count(phrase):
     return phrase.count('.')
 
 def time():
-    import datetime
+    from datetime import datetime
+    return datetime.now()
 
 def get_todos():
     with open('database/todo.txt', 'r') as file:
@@ -63,3 +64,6 @@ def count_todo():
     todos = get_todos()
     count = len(todos)
     return count
+
+# def time():
+#     return datetime.now().strftime("%H:%M:%S")
