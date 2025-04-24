@@ -58,7 +58,12 @@ def update_todo_index(todo, new_todo):
 def write_todos(todos):
     with open('database/todo.txt', 'w') as file:
         file.writelines(todos)
-        file.close()     
+        file.close()   
+
+def complete_todo(todo):
+    todos = get_todos()
+    todos.remove(todo)
+    write_todos(todos)   
 
 def count_todo():
     todos = get_todos()
